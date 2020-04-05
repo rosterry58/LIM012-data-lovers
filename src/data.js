@@ -18,13 +18,13 @@ export const orderData = (data, sortBy, sortOrder) => {
     }
     return result;
   };
-  
+
   export const searchChampions = (data, searchBy, condition) => {
     const search = data.filter(letter => (letter[searchBy]).toLowerCase().indexOf(condition) !== -1);
     return search;
   };
-  export const orderFilterTags = (item, index, condition) => {
-    const championRol = item.filter(el => (el[index][0] === condition || el[index][1] === condition));
-    return championRol;
-  };
+  // export const orderFilterTags = (item, index, condition) => {
+  //   const championRol = item.filter(el => (el[index][0] === condition || el[index][1] === condition));
+  //   return championRol;
+  // };
   

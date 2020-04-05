@@ -2,53 +2,87 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css"/>
     <link rel="shortcut icon" href="imagenes/logo.png" >
-    <!-- <script src="https://kit.fontawesome.com/995e334b50.js" crossorigin="anonymous"></script> -->
   </head>
   <body>
   <!-- PRIMERA PANTALLA -->
-  <div id = 'firstScreen'>
-    <header>
-      <input type='checkbox' id='btn-menu'>
-      <label for="btn-menu"><img src="imagenes/icono1.png" width="30px" height="30px" alt=""></label>
-         <nav class='menu'>
-            <ul>
-              <li><a href=''>Logo</a></li>
-              <li><a href=''>Juego</a></li>
-              <li><a href=''>Lista de Términos</a></li>
-              <li><a href=''>Noticias</a></li>
-              <li><a href=''>Sobre Nosotras</a></li>
-            </ul>
-          </nav>
+  <div id="firstScreen">
+    <header class="header">
+      <div class="menu">
+      <div class="logo">
+        <a href="index.html"><img src="Imagenes/league-of-legends-icon-png-.png" witdth= "50px" height="50px" alt=""></a>
+      </div>
+      <input type="checkbox" id="btn-menu">
+      <label for="btn-menu"><img src="icono1.png" width="30px" height="30x" alt=""></label>      
+      <nav class="nav">
+              <ul>
+                <li><a href=''>Juego</a></li>
+                <li><a href=''>Lista de Términos</a></li>
+                <li><a href=''>Noticias</a></li>
+                <li><a href=''>Sobre Nosotras</a></li>
+              </ul>
+      </nav>
+      <div class="social">
+        <div><a href="#">facebook</a>
+        <div><a href="#">Twitter</a>
+        </div>
+      </div>
+    </div>
     </header>
-  <div class="bttnM">
-    <button id='btnMostrar' class='btnMostrar'>Conoce a los campeones</button>
+    <section class="section">
+      <div class="slider">
+        <div class="slider-content">
+          <img src="Imagenes/lol-league-of-Legends-logo.png" class="lol" alt="">
+          <div class="bttnM">
+            <button id="btnMostrar" class="btnMostrar">Conoce a los campeones</button>
+          </div>
+          </div>
+      </div>
+    </section>
+    <div class="container">
+      <div class="stats">
+        <div id="contentStats"></div>
+    </div>
   </div>
-  </div> 
-
+  <footer class="footer">
+      <nav class="pie">
+      <a href="#">Desarrollado por Lucy y Rosmery</a>
+      </nav>
+    </footer>
+  </div>
   <!-- SEGUNDA PANTALLA -->
-  <div id = 'secondScreen'>
-    <!-- ORDENAR -->
-     <section class='orderList'>
-      <select name='order' id='order' class='styleList'>
+  <div id="secondScreen" class="hide">
+    <div class="containerHigher">
+      <div class="title-screen">
+        <h4>UNIVERSO DE CAMPEONES</h4>
+      </div>
+      <div class="ascend-descend">
+        <select name="order" id="order" class="selectOrder">       
         <option value='' selected disabled>Ordenar</option>
         <option value='ascendente'>Ascendente</option>
-        <option value='descendente'>Descendente</option>
-      </select>
-        <!-- BUSCAR -->
-        <i class="fas fa-search searching"></i>
-        <input type="search" id='inputBuscar' placeholder='Buscar' class='styleList'>        
-     </section><br><br>
-     <div>
-      <button class='btnRoles' id='btnRoles'>Roles de Campeones</button>
-    </div> 
+        <option value='descendente'>Descendente</option>   
+      </div>   
+      <div class="search-lol">  
+        <input type='text' id='inputBuscar' class= "inputBuscar" placeholder='Buscar'>
+      </div>   
+    </div>
+  <div class="containerMedium">
+      <div class="championList">
+        <div id="contentList"></div>
+      </div>
+    </div>
+    <div class="botones">
+      <button class='btnTop5' id='btnRoles'>Top5</button>     
+      <button class='btnRoles' id='btnRoles'>Roles de Campeones</button>     
+    </div>
+  </div>
+  <!-- CALCULO AGREGADO -->
 
-    <div id='contentList'></div> 
-  </div> 
   <!-- TERCERA PANTALLA -->
-  <div id='thirdScreen'>
+  <!-- <div id='thirdScreen' class="hide">
     <section class='roles'>
       <input type=image id='rolAssassin' value ='Assassin' src='imagenes/role_icon_assassin.png'>
       <input type=image id='rolFighter' value ='Fighter' src='imagenes/role_icon_fighter.png'> 
@@ -57,31 +91,27 @@
       <input type=image id='rolSupport' value ='Support' src='imagenes/role_icon_support.png'> 
       <input type=image id='rolTank' value ='Tank' src='imagenes/role_icon_tank.png'>  
     </section> 
-   
       <div class="videoIntro">
           <video src="imagenes/videoChampions.mp4" autoplay loop muted width="50%" height="50%"></video>
       </div>     
-  
-    </div>
+    </div> -->
   <!--CUARTA PANTALLA -ROL ASESINO-->
-  <div id='fourthScreen' class='fourthScreen'>
+  <!-- <div id='fourthScreen' class="hide">
     <section class='asesino'>
       <h1>ASESINOS</h1>
-      <section>
+      <section> -->
         <!--boton ordenar-->
-          <select name='order' id='orderRoles' class='selectStyle'>
+          <!-- <select name='order' id='orderRoles' class='selectStyle'>
             <option value='' selected disabled>Ordenar</option>
             <option value='ascendente'>Ascendente</option>
             <option value='descendente'>Descendente</option>
-          </select>
+          </select> -->
         <!--boton buscar-->
-          <i class="fas fa-search searching"></i>
+          <!-- <i class="fas fa-search searching"></i>
           <input type='text' id='inputBuscarRoles' placeholder='Buscar'>
-      </section>
-      
-    
-    <div id='contentListAsse'></div> 
-  </div>
+      </section> -->
+    <!-- <div id='contentListAsse'></div>  -->
+  <!-- </div> -->
   <script src="main.js" type="module"></script>
   </body>
 </html>
