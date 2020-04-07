@@ -30,7 +30,6 @@ body {
           width: 30px;
           height: 30px;
           padding: 10px;
-          border-right:1px solid #fff
       }
       header label:hover {
           cursor: pointer;
@@ -52,7 +51,7 @@ body {
           align-self: center;
         }
         .nav{
-          flex: 5 1 auto;
+          flex: 4 1 auto;
         }
         .nav ul {
           margin:0;
@@ -63,8 +62,8 @@ body {
         .nav li {
             flex-grow: 1;
             text-align: center;
-            border-right: 1px solid #fff;
-        }
+            border-left: 1px solid #fff;
+          }
         .nav li:hover {
             background: rgb(212, 175, 55);
         }
@@ -76,15 +75,6 @@ body {
             text-transform: uppercase;
             letter-spacing: 2px;
       }
-          .social{
-            flex: 1 1 auto;
-            display: flex;
-          }
-            .social a{
-              font-size: 18px;
-              color: #fff;
-              padding: 0 5px;
-            }
   .section{
     display: flex;
     flex-flow: row wrap;
@@ -111,27 +101,42 @@ body {
         justify-content: center;
         align-items: center;
       }
-      .slider-content .lol{
-          display: flex;
+        .lol{
           width: 600px;
           height: 300px;
           padding-bottom: 40px;
           align-self: center;
-        }
-        .slider-content .bntMostrar{
-          display: flex;
-          position:relative;
-          text-decoration: none;
-          color: #333;
-          padding: 9px 20px;
-          border: 1px solid #fff;
+          }
+        .btnMostrar{
+          outline: none;
           text-transform: uppercase;
-          transition: all .3s ease-in-out; 
-          z-index: 1;
+          cursor: pointer;
+          border-radius: 20px;
+          font-family: 'Noto Sans JP', sans-serif;
+          font-size: 1em;
+          font-weight: 300;
+          letter-spacing: 0.08em;
         }
-          .btnMostar:hover{
-            background-color: #fff;
-            color: #333;
+          .btnMostrar:focus, .btnMostrar:hover{
+            box-shadow:inset 0 0 0 2em var(--hover);
+          }
+          .btnMostrar{
+            color: #fff;
+            --hover:#00a8b5
+          }          
+          button{
+            color:var(--color);
+            transition:.25s;
+          }
+          button:focus, button:hover{
+            border-color:var(--hover);
+            color:#fff;
+          }
+          button{
+            background:0 0;border:2px solid;
+            font:inherit;line-height:1;
+            margin:.5em;
+            padding:1em 2em
           }
 @keyframes slider{
   0%{
@@ -159,22 +164,6 @@ body {
     background-image: url('imagenes/slider4.jpg');
   }
 }
-    .articulos{
-      background: #4e4e6a;
-      flex: 2 1 auto;
-      display: flex;
-      flex-flow: row wrap;
-    }
-      .article{
-        background: #1f6cb0;
-        flex:1 1 40%;
-      }
-        .aside{
-          background: #f73f52;
-        }
-          .publicidad{
-            background: #ffea85;
-          }
   .footer{
     background: #000;
     display: flex;
@@ -184,7 +173,7 @@ body {
       background: #e6af2e;
       width: 300px;
     }
-@media all and (max-width: 750px){
+@media screen and (max-width: 750px){
   header label{
       display: block;
       width: 70px;
@@ -209,105 +198,264 @@ body {
   .section{
     flex-direction: column;
   }
-  .aside{
-    display: flex;
-    justify-content: center;
-  }
-  .slider-content .lol{
+  .lol{
     width: 400px;
     height: 200px;
   }
 } 
-@media all and (max-width: 600px){
-  .articulos{
-    flex-direction: column;
-  }
-  .slider-content .lol{
+@media screen and (max-width: 600px){
+  .lol{
     width: 300px;
     height: 150px;
   }
 }
-@media all and (max-width: 400px){
-  .aside{
-    flex-direction: column;
-  }
-  .slider-content .lol{
+@media screen and (max-width: 400px){
+  .lol{
     width: 150px;
     height: 100px;
   }
 }
-.containerHigher{
-  background: #232020;
+/* SEGUNDA PANTALLA */
+.higher-container{
   display: flex;
-  /* flex-flow: nowrap; */
-  /* align-items: flex-start; */
+  background: #ffffff;
   width: 100%;
-  height: 200px;
+  height: 260px;
+  align-items: center;
+  justify-content: center;
 }
   .title-screen{
-    background: hotpink;
     display: flex;
-    width: 300px;
-    height: 100px;
+    width: 50%;
+    height: 100%;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
   }
-    h4{
-      display: flex;
+    .title-champions{
+      width: 100%;
+      height: 180px;
+      text-transform: uppercase;
       text-align: center;
-      color: #191919;
-      font-size: 200%;
+      align-items: center;
+      color: #343434;
     }
+      h1{
+        font-style: italic;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-weight: 500;
+        font-size: 2em;
+      }
+      .big{
+        font-size: 3em;
+        font-family: 'Merienda', cursive;      
+      }
+    .description-screen{
+      width: 100%;
+      height: 40px;
+      text-align: center;
+    }
+      .description{
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 1em;
+        font-weight: 300;
+      }
   .ascend-descend{
-    background: lightblue;
     display: flex;
-    width: 200px;
+    width: 25%;
     height: 80px;
+    align-items: center;
+    justify-content: center;
     order: -1;
 }
-    .selectOrder{
-      width: 50px;
-      height: 50px;
-    }
+    .select-order{
+      width: 60%;
+      height: 40px;
+      border: 2.5px solid #fbb901;
+      box-sizing: border-box;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+      padding-left: 15px;
+      outline: none;
+      transition: .3s;
+      letter-spacing: 0.1em;
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 0.8em;
+      font-weight: 300;
+      }
+      .selectOrder:focus{
+        border-color: #fbb901;
+        box-shadow: 0 0 8px 0 #fbb901;
+      }
   .search-lol{
-    background: red;
     display: flex;
-    width: 100px;
-    height: 50px;
+    width: 25%;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
     order: 3;
 }
-    .inputBuscar{
-      width: 40px;
+    .input-search{
+      width: 60%;
       height: 40px;
+      border: 2.5px solid #fbb901;
+      box-sizing: border-box;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+      padding-left: 15px;
+      outline: none;
+      transition: .3s;
+      letter-spacing: 0.1em;
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 0.8em;
+      font-weight: 300;
     }
-.containerMedium{
+    .inputBuscar:focus{
+      border-color: #fbb901;
+      box-shadow: 0 0 8px 0 #fbb901;
+    }
+.medium-container{
   display: flex;
   flex-flow: column nowrap;
   }
       #contentList{
-          background: #fff;
-          display: flex;
-          flex-wrap: wrap;
-          flex-direction: row;
-          align-items: center;
-          width: 100%;
-          padding: 60px; 
-      }
+        background: #ffffff;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        padding: 80px; 
+        padding-top: 0px;
+        }
       .card-champions{
           width: 20%;
-          height: 400px;
-          margin: 20px;
-          padding: 30px;
+          height: 480px;
+          margin: 10px;
+          padding: 10px;
           flex: auto;
       }
-      .galeria-img{
+         .galeria-img{
           width: 100%;
           height: 350px;
           object-fit: cover;
           } 
+
+          @media screen and (max-width:768px){
+            h1{
+              font-style: italic;
+              font-family: 'Noto Sans JP', sans-serif;
+              /* font-weight: 500; */
+              font-size: 0.5em;
+            }
+            .big{
+              font-size: 1em;
+              font-family: 'Merienda', cursive;      
+            }
+            #contentList{
+              width: 100%;
+              padding: 10px; 
+              padding-top: 0px;
+              }
+              .card-champions{
+                width: 30%;
+              }
+            }
+          @media screen and (max-width:369px){
+            h1{
+              font-style: italic;
+              font-family: 'Noto Sans JP', sans-serif;
+              /* font-weight: 500; */
+              font-size: 0.5em;
+            }
+            .big{
+              font-size: 1em;
+              font-family: 'Merienda', cursive;      
+            }
+                  #contentList{
+              width: 100%;
+              padding: 2px; 
+              padding-top: 0px;
+              }
+            .card-champions{
+              width: 30%;
+              height: 320px;
+            }
+            .galeria-img{
+              width: 100%;
+              height: 250px;
+              }
+            }
           .name-champions{
-              text-align: center;                
-              color: #828282;
+            font-size: 1.5em;
+            font-family: 'Merienda', cursive;      
+            text-align: center;                
+            color: #fbb901;
           }
-  
+          .info-champions{
+            color: #343434;
+            text-align: center;                
+            font-style: italic;
+            font-family: 'Noto Sans JP', sans-serif;
+            font-weight: 500;
+            font-size: 1em;
+            }
+.lower-container{
+  display: flex;
+  background-color: rgba(228, 226, 212, 0.9);
+  padding: 2rem 0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 60px;
+  justify-content: space-around;
+  align-items: center;
+  box-sizing: border-box;
+}
+  .btnTop5{
+    outline: none;
+    border: none;
+    background: #00a8b5;
+    width: 260px;
+    color: #ffffff;
+    height: 40px;
+    border-radius: 20px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1em;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    margin: 0em;
+    padding: 0em;
+  }
+  .btnTop5:hover{
+    background: #00a8b5;
+    box-shadow: 0 0 5px #00a8b5,
+                0 0 25px #00a8b5;
+  }
+  .btnRoles{
+    outline: none;
+    border: none;
+    background: #00a8b5;
+    width: 260px;
+    color: #ffffff;
+    height: 40px;
+    border-radius: 20px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1em;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    margin: 0em;
+    padding: 0em;
+  }
+  .btnRoles:hover{
+    background: #00a8b5;
+    box-shadow: 0 0 5px #00a8b5,
+                0 0 25px #00a8b5;
+  }
 
 
 
