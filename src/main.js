@@ -32,9 +32,9 @@ const listOnScreen = (dataLol) => {
     <div class="card-champions">
     <img src=${champion.splash} class="galeria-img">
     <p class="name-champions">${champion.name}</p>
-    <p class="info-champions">Difficulty: ${champion.info.attack}</p>
-    <p class="info-champions">Difficulty: ${champion.info.defense}</p>
-    <p class="info-champions">Difficulty: ${champion.info.magic}</p>
+    <p class="info-champions">Attack: ${champion.info.attack}</p>
+    <p class="info-champions">Defense: ${champion.info.defense}</p>
+    <p class="info-champions">Magic: ${champion.info.magic}</p>
     <p class="info-champions">Difficulty: ${champion.info.difficulty}</p>
     </div>
       `;
@@ -58,7 +58,7 @@ enterText.addEventListener('keyup', () => {
   listOnScreen(searchChampions(championArray, 'name', text));
   if (contentList.innerHTML === '') {
     contentList.innerHTML += `
-      <p>No se encontraron resultados</p>
+      <p>No results were found.</p>
       `;
   }
 });
@@ -81,7 +81,7 @@ const fTop = (dataLol) => {
   let result = '';
   dataLol.forEach((champion) => {
     const showChampions = `
-    <div class="card-top">
+    <div class="card-top" id="top">
     <img src=${champion.splash} class="galeria-top">
     <p class="name-top">${champion.name}</p>
     <p class="promedio-top">Average: ${champion.promedio}</p>
@@ -91,6 +91,8 @@ const fTop = (dataLol) => {
   });
   contentTop.innerHTML = result;
 };
+// necesita agregarle un identificador para llamarlo en CSS y llamar solo a ese elemento
+// línea 80
 
 // BOTON TOP 5
 const btnTop5 = document.getElementById('btnTop5');
@@ -139,18 +141,16 @@ inputBuscarRoles.addEventListener('keyup', () => {
   listOnScreenRol(searchChampions(championArray, 'name', text));
   if (contentListRol.innerHTML === '') {
     contentListRol.innerHTML += `
-      <p>ERROR!!!</p>
+      <p>No results were found.</p>
       `;
   }
 });
 
 // ORDENAR POR ROL ASESINO
 const video = document.getElementById('video');
-const footer = document.getElementById('footer');
 const mostrarAsesinos = document.getElementById('rolAssassin');
 mostrarAsesinos.addEventListener('click', () => {
   video.classList.add('hide');
-  footer.classList.add('hide');
   fourthScreen.classList.remove('hide');
   // if (contentListRol.innerHTML === 'Assassin') {
   //   contentListRol.innerHTML += `
@@ -161,14 +161,25 @@ mostrarAsesinos.addEventListener('click', () => {
 const ordenarAsesinos = document.querySelector('#rolAssassin');
 ordenarAsesinos.addEventListener('click', () => {
   const ordenar = ordenarAsesinos.value;
+  if (contentListRol.innerHTML === ordenar) {
+    // document.getElementById('title-fourthScreen').innerHTML = '';
+    contentListRol.innerHTML += `
+      <h3>Assassin</h3>
+      `;
+  }
   listOnScreenRol(orderFilterTags(championArray, 'tags', ordenar));
 });
+// traerme el h2 por el id e insertarle el texto
+// const title = document.getElementById('title-fourthScreen');
 
 // ORDENAR POR ROL LUCHADOR
 const mostrarTiradores = document.getElementById('rolFighter');
 mostrarTiradores.addEventListener('click', () => {
   thirdScreen.classList.remove('hide');
   fourthScreen.classList.remove('hide');
+  // if (contentListRol.innerHTML === 'Assassin') {
+  //   document.getElementById('title-fourthScreen').innerHTML = '';
+  // }
 });
 const ordenarLuchador = document.querySelector('#rolFighter');
 ordenarLuchador.addEventListener('click', () => {

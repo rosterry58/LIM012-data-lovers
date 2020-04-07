@@ -21,10 +21,10 @@
       <label for="btn-menu"><img src="icono1.png" width="30px" height="30x" alt=""></label>
       <nav class="nav">
         <ul>
-          <li><a href="https://euw.leagueoflegends.com/es-es/how-to-play/">Juego</a></li>
-          <li><a href="">Lista de Términos</a></li>
-          <li><a href="https://esports.as.com/league-of-legends/">Noticias</a></li>
-          <li><a href="">Sobre Nosotras</a></li>
+          <li><a href="https://euw.leagueoflegends.com/es-es/how-to-play/">game</a></li>
+          <li><a href="https://league-of-legends-lol.fandom.com/es/wiki/Diccionario_de_Terminos_del_LoL">list of terms</a></li>
+          <li><a href="https://esports.as.com/league-of-legends/">news</a></li>
+          <li><a href="">about us</a></li>
         </ul>
       </nav>
     </header>
@@ -32,13 +32,13 @@
       <div class="slider">
         <div class="slider-content">
           <img src="Imagenes/lol-league-of-Legends-logo.png" class="lol" alt="">
-          <button id="btnMostrar" class="btnMostrar">Conoce a los campeones</button>
+          <button id="btnMostrar" class="btnMostrar">Meet the champions</button>
         </div>
       </div>
     </section>
     <footer class="footer">
       <nav class="pie">
-        <a href="#">Desarrollado por Lucy y Rosmery</a>
+        <a href="#">©Copyright 2020 by Ruth Campos & Rosmery Terry</a>
       </nav>
     </footer>
   </div>
@@ -47,18 +47,18 @@
     <header class="higher-container">
       <div class="title-screen">
         <div class="title-champions">
-          <h1>universo de <span class="big">campeones</span></h1>
+          <h1>universe of <span class="big">champions</span></h1>
         </div>
         <div class="description-screen">
-          <p class="description">Con más de 134 campeones, encontrarás el que se ajuste perfectamente 
-          a tu estilo de juego. Domina a uno o domínalos a todos.</p>
+          <p class="description">With over 134 champions, 
+            you will find the one that perfectly matches your playing style. Master one or master them all.</p>
         </div>
       </div>
       <div class="ascend-descend">
         <select name="order" id="order" class="select-order">
           <option>Order</option>
-          <option value="ascendente">Ascendente</option>
-          <option value="descendente">Descendente</option>
+          <option value="ascendente">Ascending</option>
+          <option value="descendente">Descending</option>
         </select>
       </div>
       <div class="search-lol">
@@ -73,14 +73,15 @@
     </section>
     <footer class="lower-container">
       <button class="btnTop5" id="btnTop5">Top 5</button>
-      <button class="btnRoles" id="btnRoles">Roles de Campeones</button>
+      <button class="btnRoles" id="btnRoles">Roles of Champions</button>
     </footer>
   </div>
 <!-- CALCULO AGREGADO -->
 <div id="calculationScreen" class="hide">
   <header class="title-calculation">
     <h2 class="title-top">top 5</h2>
-    <p class="description-top">estadísticas defensivas</p>
+    <p class="description-top">defensive statistics</p>
+    <p class="description-top-phase">Maybe they outnumber me, but never in strength.</p>
   </header>
   <section class="stats-calculation">
       <div class="stats">
@@ -90,38 +91,51 @@
   </section>
   <footer class="footer">
     <nav class="pie">
-      <a href="#">Desarrollado por Lucy y Rosmery</a>
+      <a href="#">©Copyright 2020 by Ruth Campos & Rosmery Terry</a>
     </nav>
   </footer>
 </div>
-<!-- TERCERA PANTALLA -->
+<!-- TERCERA PANTALLA -->          
 <div id="thirdScreen" class="hide">
-  <section class='roles'>
-    <div class="asse">
-      <input type=image id='rolAssassin' value ='Assassin' src='imagenes/role_icon_assassin.png'>
-      <p>Assesian</p>
+  <header class=title-calculation>
+    <h3 class="title-top">roles de campeones</h3>
+    <p class="description-top-phase">Fight and you will be remembered as heroes, or you will die and you will be remembered as cowards!</p>
+  </header>
+  <section class="roles-firstScreen">
+    <div class="button-assassin">
+      <input type=image id="rolAssassin" value="Assassin" src="imagenes/role_icon_assassin.png">
+      <p>Assassin</p>
     </div>
-    <input type=image id='rolAssassin' value ='Assassin' src='imagenes/role_icon_assassin.png'>
-    <input type=image id='rolFighter' value ='Fighter' src='imagenes/role_icon_fighter.png'> 
-    <input type=image id='rolMage' value ='Mage' src='imagenes/role_icon_mage.png'> 
-    <input type=image id='rolMarksman' value ='Marksman' src='imagenes/role_icon_marksman.png'> 
-    <input type=image id='rolSupport' value ='Support' src='imagenes/role_icon_support.png'> 
-    <input type=image id='rolTank' value ='Tank' src='imagenes/role_icon_tank.png'>  
+    <div class="button-fighter">
+      <input type=image id="rolFighter" value="Fighter" src="imagenes/role_icon_fighter.png"> 
+      <p>Fighter</p>
+    </div>
+    <div class="button-mage">
+      <input type=image id="rolMage" value="Mage" src="imagenes/role_icon_mage.png"> 
+      <p>Mage</p>
+    </div>
+    <div class="button-marksman">
+      <input type=image id="rolMarksman" value="Marksman" src="imagenes/role_icon_marksman.png"> 
+      <p>Marksman</p>
+    </div>
+    <div class="button-support">
+      <input type=image id="rolSupport" value="Support" src="imagenes/role_icon_support.png"> 
+      <p>Support</p>
+    </div>
+    <div class="button-tank">
+      <input type=image id="rolTank" value="Tank" src="imagenes/role_icon_tank.png"> 
+      <p>Tank</p>
+    </div>
   </section> 
     <div class="videoIntro" id="video">
         <video src="imagenes/videoChampions.mp4" autoplay loop muted width="50%" height="50%"></video>
-    </div>     
-  <footer class="footer" id="footer">
-    <nav class="pie">
-      <a href="#">Desarrollado por Lucy y Rosmery</a>
-    </nav>
-  </footer>
+    </div>
 </div>
 <!-- CUARTA PANTALLA -->
 <div id="fourthScreen" class="hide">
   <header class="header-container">
     <div class="title-screen-asse">
-      <h2 class="title-asse">ASESINOS</h2>
+      <p class="title-asse" id="title-fourthScreen"></p>
     </div>
     <div class="ascend-descend">
       <select name="order" id="orderRoles" class="select-order">
@@ -140,11 +154,6 @@
       </div>
     </div>
   </section>
-<footer class="footer">
-    <nav class="pie">
-      <a href="#">Desarrollado por Lucy y Rosmery</a>
-    </nav>
-  </footer>
 </div>
 
 
