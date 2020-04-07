@@ -313,18 +313,22 @@ body {
       box-shadow: 0 0 8px 0 #fbb901;
     }
 .medium-container{
+  background: #fff;
   display: flex;
-  flex-flow: column nowrap;
+  justify-content: center;
+  width: 100%;
+  }
+  .championList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
   }
       #contentList{
-        background: #ffffff;
+        background: #fff;
         display: flex;
         flex-wrap: wrap;
-        flex-direction: row;
-        align-items: center;
         width: 100%;
-        padding: 80px; 
-        padding-top: 0px;
         }
       .card-champions{
           width: 20%;
@@ -336,54 +340,8 @@ body {
          .galeria-img{
           width: 100%;
           height: 350px;
-          object-fit: cover;
+          /* object-fit: cover; */
           } 
-
-          @media screen and (max-width:768px){
-            h1{
-              font-style: italic;
-              font-family: 'Noto Sans JP', sans-serif;
-              /* font-weight: 500; */
-              font-size: 0.5em;
-            }
-            .big{
-              font-size: 1em;
-              font-family: 'Merienda', cursive;      
-            }
-            #contentList{
-              width: 100%;
-              padding: 10px; 
-              padding-top: 0px;
-              }
-              .card-champions{
-                width: 30%;
-              }
-            }
-          @media screen and (max-width:369px){
-            h1{
-              font-style: italic;
-              font-family: 'Noto Sans JP', sans-serif;
-              /* font-weight: 500; */
-              font-size: 0.5em;
-            }
-            .big{
-              font-size: 1em;
-              font-family: 'Merienda', cursive;      
-            }
-                  #contentList{
-              width: 100%;
-              padding: 2px; 
-              padding-top: 0px;
-              }
-            .card-champions{
-              width: 30%;
-              height: 320px;
-            }
-            .galeria-img{
-              width: 100%;
-              height: 250px;
-              }
-            }
           .name-champions{
             font-size: 1.5em;
             font-family: 'Merienda', cursive;      
@@ -398,6 +356,49 @@ body {
             font-weight: 500;
             font-size: 1em;
             }
+            /* @media screen and (max-width:768px){
+              h1{
+                font-style: italic;
+                font-family: 'Noto Sans JP', sans-serif;
+                font-size: 0.5em;
+              }
+              .big{
+                font-size: 1em;
+                font-family: 'Merienda', cursive;      
+              }
+              #contentList{
+                width: 100%;
+                padding: 10px; 
+                padding-top: 0px;
+                }
+                .card-champions{
+                  width: 30%;
+                }
+              }
+            @media screen and (max-width:369px){
+              h1{
+                font-style: italic;
+                font-family: 'Noto Sans JP', sans-serif;
+                font-size: 0.5em;
+              }
+              .big{
+                font-size: 1em;
+                font-family: 'Merienda', cursive;      
+              }
+                #contentList{
+                width: 100%;
+                padding: 2px; 
+                padding-top: 0px;
+                }
+              .card-champions{
+                width: 30%;
+                height: 320px;
+              }
+              .galeria-img{
+                width: 100%;
+                height: 250px;
+                }
+              }   */
 .lower-container{
   display: flex;
   background-color: rgba(228, 226, 212, 0.9);
@@ -435,7 +436,7 @@ body {
   .btnRoles{
     outline: none;
     border: none;
-    background: #00a8b5;
+    background: #fbb901;
     width: 260px;
     color: #ffffff;
     height: 40px;
@@ -449,110 +450,79 @@ body {
     padding: 0em;
   }
   .btnRoles:hover{
-    background: #00a8b5;
-    box-shadow: 0 0 5px #00a8b5,
-                0 0 25px #00a8b5;
+    background: #fbb901;
+    box-shadow: 0 0 5px #fbb901,
+                0 0 25px #fbb901;
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*TERCERA PANTALLA*/
-.videoIntro {
-    position:relative;
-    text-align: center;
-}
-
-/* ASESINOS */
-.asesino {
-  position:relative;
-  text-align: center;
-  top: 50px;
-  font-size: 200%;
-}
-.roles {
-position:relative;
-text-align: center;
-letter-spacing: 50px;
-}
-.optionsAsse {
-  position: relative;
-  text-align: left;
-}
-.searchChampionsA {
-  position: relative;
-  text-align: right;
-}
-#contentListRol {
-    color: #d1cabc;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    padding: 4rem;
-    grid-gap: 4rem;
-}
-.tags {
-    position: absolute;
-    font-size: 1.5rem;
-    margin-left: 5%;
-    transition: all ease 0.5s;
-    font-family: "Trade Winds", cursive;
-    font-size: 80%;
-    color:rgb(177, 153, 20);
-}
-
-
-
-/*APLICANDO CLASSLIST */
-.classNone {
-  display: none;
-}
-/*TOP*/
-#contentTop {
-  color: #d1cabc;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  padding: 4rem;
-  grid-gap: 4rem;
-}
-.championSplash {
+/* CALCULO AGREGADO */
+.title-calculation{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  flex-flow: column nowrap;
   width: 100%;
-  height: 100%;
-} 
+  height: 240px;
+  background: chartreuse;
+}
+  .title-top{
+    font-size: 5em;
+    font-family: 'Merienda', cursive;   
+    color: blueviolet;  /* prueba */
+}
+  .description-top{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 500;
+    font-size: 2em;
+    color: #343434;
+  }
+.stats-calculation{
+  display: flex;
+  justify-content: center;
+  background: yellow;
+  width: 100%;
+  }
+    .stats{
+      display: flex;
+      flex-wrap: wrap;      
+      justify-content: center;
+      background: red;
+      width: 90%;
+    }
+        #contentTop{
+          background: blue;
+          display: flex;
+          /* flex-wrap: wrap-reverse; */
+          flex-wrap: wrap;
+          /* flex-direction: row; */
+          width: 80%;
+          }
+            .card-top{
+              background: pink;
+              width: 30%;
+              height: 400px;
+              margin: 10px;
+              padding: 10px;
+              flex: auto;
+            }
+              .galeria-top{
+                background: skyblue;
+                width: 100%;
+                height: 350px;
+              }
+              .name-top{
+                background: springgreen;
+              }
+              .promedio-top{
+                background: tomato;
+              }
+/* TERCERA PANTALLA - ROLES DE CAMPEONES - ICONOS Y VIDEO */
 
 
 
 
+
+/* CUARTA PANTALLA - FILTRAR ROLES DE CAMPEONES */
 .header-container{
   background: #fff;
   display:flex;
@@ -562,7 +532,6 @@ letter-spacing: 50px;
   justify-content: center;
 }
   .title-screen-asse{
-    /* background: rgb(130, 244, 96); */
     background: #fff;
     display: flex;
     width: 50%;
@@ -575,59 +544,49 @@ letter-spacing: 50px;
       font-size: 3em;
       font-family: 'Merienda', cursive; 
     }
-  .ascend-descend{
-    background: #fff;
-    display:flex;
-    width: 25%;
-    height: 80px;
-    order: -1;
-    align-items: center;
-    justify-content: center;
-  } 
-    .select-order{
-      width: 60%;
-      height: 40px;
-      border: 2.5px solid #fbb901;
-      box-sizing: border-box;
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-      border-radius: 10px;
-      padding-left: 15px;
-      outline: none;
-      transition: .3s;
-      letter-spacing: 0.1em;
-      font-family: 'Noto Sans JP', sans-serif;
-      font-size: 0.8em;
-      font-weight: 300;
-    }
-      .select-order:focus{
-        border-color: #fbb901;
-        box-shadow: 0 0 8px 0 #fbb901;
+    #contentListRol{
+      background: #fff;
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
       }
-  .search-lol{
-    background: #fff;
-    width: 25%;
-    height: 80px;
-    display: flex;
-    order: 3;
-    align-items: center;
-    justify-content: center;
-  }
-    .input-search{
-      width: 60%;
-      height: 40px;
-      border: 2.5px solid #fbb901;
-      box-sizing: border-box;
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-      border-radius: 10px;
-      padding-left: 15px;
-      outline: none;
-      transition: .3s;
-      letter-spacing: 0.1em;
-      font-family: 'Noto Sans JP', sans-serif;
-      font-size: 0.8em;
-      font-weight: 300;
-    }
-    .input-search:focus{
-      border-color: #fbb901;
-      box-shadow: 0 0 8px 0 #fbb901;
-    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
