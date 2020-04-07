@@ -332,6 +332,7 @@ body {
         display: flex;
         flex-wrap: wrap;
         width: 80%;
+        justify-content: center;
         }
       .card-champions{
         background: steelblue;
@@ -550,15 +551,20 @@ body {
     align-items: center;
   }
     .title-asse{
-      font-size: 3em;
+      color: black;
+      font-size: 3.5em;
       font-family: 'Merienda', cursive; 
+      text-transform: uppercase;
     }
+ 
     #contentListRol{
-      background: #fff;
+      /* background: #fff; */
+      background: red;
       display: flex;
       flex-wrap: wrap;
-      width: 100%;
-      }
+      width: 80%;
+      justify-content: center;
+    }
 
 
 

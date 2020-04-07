@@ -148,85 +148,92 @@ inputBuscarRoles.addEventListener('keyup', () => {
 
 // ORDENAR POR ROL ASESINO
 const video = document.getElementById('video');
-const mostrarAsesinos = document.getElementById('rolAssassin');
-mostrarAsesinos.addEventListener('click', () => {
+const showAssassin = document.getElementById('rolAssassin');
+showAssassin.addEventListener('click', () => {
   video.classList.add('hide');
   fourthScreen.classList.remove('hide');
-  // if (contentListRol.innerHTML === 'Assassin') {
-  //   contentListRol.innerHTML += `
-  //     <h3>Assassin</h3>
-  //     `;
-  // }
-});
-const ordenarAsesinos = document.querySelector('#rolAssassin');
-ordenarAsesinos.addEventListener('click', () => {
-  const ordenar = ordenarAsesinos.value;
-  if (contentListRol.innerHTML === ordenar) {
-    // document.getElementById('title-fourthScreen').innerHTML = '';
-    contentListRol.innerHTML += `
-      <h3>Assassin</h3>
-      `;
+  const titleAssassin = document.getElementById('rolAssassin').value;
+  if (titleAssassin) {
+    document.getElementById('title-fourthScreen').innerHTML = 'Assassin';
   }
-  listOnScreenRol(orderFilterTags(championArray, 'tags', ordenar));
 });
-// traerme el h2 por el id e insertarle el texto
-// const title = document.getElementById('title-fourthScreen');
+const orderAssassin = document.querySelector('#rolAssassin');
+orderAssassin.addEventListener('click', () => {
+  const order = orderAssassin.value;
+  listOnScreenRol(orderFilterTags(championArray, 'tags', order));
+});
 
 // ORDENAR POR ROL LUCHADOR
-const mostrarTiradores = document.getElementById('rolFighter');
-mostrarTiradores.addEventListener('click', () => {
-  thirdScreen.classList.remove('hide');
+const showFighter = document.getElementById('rolFighter');
+showFighter.addEventListener('click', () => {
   fourthScreen.classList.remove('hide');
-  // if (contentListRol.innerHTML === 'Assassin') {
-  //   document.getElementById('title-fourthScreen').innerHTML = '';
-  // }
+  const titleFighter = document.getElementById('rolFighter').value;
+  if (titleFighter) {
+    document.getElementById('title-fourthScreen').innerHTML = 'Fighter';
+  }
 });
-const ordenarLuchador = document.querySelector('#rolFighter');
-ordenarLuchador.addEventListener('click', () => {
-  const ordenar = ordenarLuchador.value;
-  listOnScreenRol(orderFilterTags(championArray, 'tags', ordenar));
+const orderFighter = document.querySelector('#rolFighter');
+orderFighter.addEventListener('click', () => {
+  const order = orderFighter.value;
+  listOnScreenRol(orderFilterTags(championArray, 'tags', order));
 });
 
 // ORDENAR POR ROL MAGOS
-const mostrarMagos = document.getElementById('rolMage');
-mostrarMagos.addEventListener('click', () => {
+const showMage = document.getElementById('rolMage');
+showMage.addEventListener('click', () => {
   fourthScreen.classList.remove('hide');
+  const titleMage = document.getElementById('rolMage').value;
+  if (titleMage) {
+    document.getElementById('title-fourthScreen').innerHTML = 'Mage';
+  }
 });
-const ordenarMago = document.querySelector('#rolMage');
-ordenarMago.addEventListener('click', () => {
-  const ordenar = ordenarMago.value;
-  listOnScreenRol(orderFilterTags(championArray, 'tags', ordenar));
+const orderMage = document.querySelector('#rolMage');
+orderMage.addEventListener('click', () => {
+  const order = orderMage.value;
+  listOnScreenRol(orderFilterTags(championArray, 'tags', order));
 });
 
 // ORDENAR POR ROL TIRADORES
-const mostrarTirador = document.getElementById('rolMarksman');
-mostrarTirador.addEventListener('click', () => {
+const showMarksman = document.getElementById('rolMarksman');
+showMarksman.addEventListener('click', () => {
   fourthScreen.classList.remove('hide');
+  const titleMarksman = document.getElementById('rolMarksman').value;
+  if (titleMarksman) {
+    document.getElementById('title-fourthScreen').innerHTML = 'Marksman';
+  }
 });
-const ordenarTirador = document.querySelector('#rolMarksman');
-ordenarTirador.addEventListener('click', () => {
-  const ordenar = ordenarTirador.value;
-  listOnScreenRol(orderFilterTags(championArray, 'tags', ordenar));
+const orderMarksman = document.querySelector('#rolMarksman');
+orderMarksman.addEventListener('click', () => {
+  const order = orderMarksman.value;
+  listOnScreenRol(orderFilterTags(championArray, 'tags', order));
 });
 
 // ORDENAR POR ROL SOPORTE
-const mostrarSoporte = document.getElementById('rolSupport');
-mostrarSoporte.addEventListener('click', () => {
+const showSupport = document.getElementById('rolSupport');
+showSupport.addEventListener('click', () => {
   fourthScreen.classList.remove('hide');
+  const titleSupport = document.getElementById('rolSupport').value;
+  if (titleSupport) {
+    document.getElementById('title-fourthScreen').innerHTML = 'Support';
+  }
 });
-const ordenarSoporte = document.querySelector('#rolSupport');
-ordenarSoporte.addEventListener('click', () => {
-  const ordenar = ordenarSoporte.value;
-  listOnScreenRol(orderFilterTags(championArray, 'tags', ordenar));
+const orderSupport = document.querySelector('#rolSupport');
+orderSupport.addEventListener('click', () => {
+  const order = orderSupport.value;
+  listOnScreenRol(orderFilterTags(championArray, 'tags', order));
 });
 
 // ORDENAR POR ROL TANQUE
-const mostrarTank = document.getElementById('rolTank');
-mostrarTank.addEventListener('click', () => {
+const showTank = document.getElementById('rolTank');
+showTank.addEventListener('click', () => {
   fourthScreen.classList.remove('hide');
+  const titleTank = document.getElementById('rolTank').value;
+  if (titleTank) {
+    document.getElementById('title-fourthScreen').innerHTML = 'Tank';
+  }
 });
-const ordenarTank = document.querySelector('#rolTank');
-ordenarTank.addEventListener('click', () => {
-  const ordenar = ordenarTank.value;
-  listOnScreenRol(orderFilterTags(championArray, 'tags', ordenar));
+const orderTank = document.querySelector('#rolTank');
+orderTank.addEventListener('click', () => {
+  const order = orderTank.value;
+  listOnScreenRol(orderFilterTags(championArray, 'tags', ordeorderar));
 });
