@@ -313,97 +313,100 @@ body {
       box-shadow: 0 0 8px 0 #fbb901;
     }
 .medium-container{
-  background: springgreen;
-  /* background: #fff; */
+  background: #fff;
   display: flex;
   justify-content: center;
   width: 100%;
-  }
+  padding-top: 15px;
+  padding-bottom: 70px;
+}
   .championList{
-    background: yellow;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 90%;
+    width: 100%;
   }
       #contentList{
-        background: red;
-        /* background: #fff; */
+        background: #fff;
         display: flex;
         flex-wrap: wrap;
-        width: 80%;
+        flex-direction: row;
+        width: 100%;
         justify-content: center;
-        }
-      .card-champions{
-        background: steelblue;
-          max-width: 20%;
-          height: 480px;
-          margin: 10px;
-          padding: 10px;
-          flex: auto;
       }
-         .galeria-img{
+      .card-champions{
+          max-width: 20%;
+          height: 400px;
+          margin: 10px;
+          box-sizing: border-box;
+          display: inline-block;
+        }
+        .card{
+          position: relative;
           width: 100%;
-          height: 350px;
+          height: 360px;
+        }
+        .img-box{
+          position: relative;
+          max-width: 100%;
+          height: 360px;
+          overflow: hidden;
+        }
+         .galeria-img{
+            max-width: 100%;
+            height: 360px;
+            transition: transform 2s;
           /* object-fit: cover; */
           } 
-          .name-champions{
-            font-size: 1.5em;
-            font-family: 'Merienda', cursive;      
-            text-align: center;                
-            color: #fbb901;
+          .card-champions:hover .galeria-img{
+            transform: scale(1.2);
           }
+        .details{
+          display: flex;
+          justify-content: center;
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          bottom: 10px;
+          right: 10px;
+          background: rgba(0, 0, 0, 0.8);
+          transform: scaleY(0);
+          transition: transform .5s;
+        }
+        .card-champions:hover .details{
+          transform: scaleY(1);
+        }
+          .content-info{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 15px;
+          }
+        .name-champions{
+          font-size: 1.5em;
+          font-family: 'Merienda', cursive;      
+          text-align: center;                
+          color: #fbb901;
+        }
+        .title-info{
+            color: #00a8b5;
+            text-align: center;                
+            font-family: 'Noto Sans JP', sans-serif;
+            font-weight: 500;
+            font-size: 1.5em;
+            text-transform: uppercase;
+        }
           .info-champions{
-            color: #343434;
+            color: #fff;
             text-align: center;                
             font-style: italic;
             font-family: 'Noto Sans JP', sans-serif;
-            font-weight: 500;
+            font-weight: 300;
             font-size: 1em;
-            }
-            /* @media screen and (max-width:768px){
-              h1{
-                font-style: italic;
-                font-family: 'Noto Sans JP', sans-serif;
-                font-size: 0.5em;
-              }
-              .big{
-                font-size: 1em;
-                font-family: 'Merienda', cursive;      
-              }
-              #contentList{
-                width: 100%;
-                padding: 10px; 
-                padding-top: 0px;
-                }
-                .card-champions{
-                  width: 30%;
-                }
-              }
-            @media screen and (max-width:369px){
-              h1{
-                font-style: italic;
-                font-family: 'Noto Sans JP', sans-serif;
-                font-size: 0.5em;
-              }
-              .big{
-                font-size: 1em;
-                font-family: 'Merienda', cursive;      
-              }
-                #contentList{
-                width: 100%;
-                padding: 2px; 
-                padding-top: 0px;
-                }
-              .card-champions{
-                width: 30%;
-                height: 320px;
-              }
-              .galeria-img{
-                width: 100%;
-                height: 250px;
-                }
-              }   */
+          }
+/* PROBANDO HOVER EN LAS IMÁGENES */
+
+
 .lower-container{
   display: flex;
   background-color: rgba(228, 226, 212, 0.9);

@@ -30,12 +30,21 @@ const listOnScreen = (dataLol) => {
   dataLol.forEach((champion) => {
     const showChampions = `
     <div class="card-champions">
-    <img src=${champion.splash} class="galeria-img">
-    <p class="name-champions">${champion.name}</p>
-    <p class="info-champions">Attack: ${champion.info.attack}</p>
-    <p class="info-champions">Defense: ${champion.info.defense}</p>
-    <p class="info-champions">Magic: ${champion.info.magic}</p>
-    <p class="info-champions">Difficulty: ${champion.info.difficulty}</p>
+      <div class="card">
+        <div class="img-box">
+          <img src=${champion.splash} class="galeria-img">
+        </div>
+        <div class="details">
+          <div class="content-info">
+            <h4 class="title-info">info</h4>
+            <p class="info-champions">Attack: ${champion.info.attack}</p>
+            <p class="info-champions">Defense: ${champion.info.defense}</p>
+            <p class="info-champions">Magic: ${champion.info.magic}</p>
+            <p class="info-champions">Difficulty: ${champion.info.difficulty}</p>
+          </div>
+        </div>
+      </div>
+      <p class="name-champions">${champion.name}</p>
     </div>
       `;
     result += showChampions;
@@ -119,7 +128,7 @@ const listOnScreenRol = (dataLol) => {
       <img src=${champion.splash} class="galeria-img">
       <p class="name-champions">${champion.name}</p>
       <p class="info-champions">Tags:</span> ${champion.tags}</p>
-     </div> 
+    </div> 
       `;
     result += showChampions;
   });
