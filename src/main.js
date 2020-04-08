@@ -36,11 +36,13 @@ const listOnScreen = (dataLol) => {
         </div>
         <div class="details">
           <div class="content-info">
-            <h4 class="title-info">info</h4>
+            <img src=${champion.img} class="small-img">
+            <h4 class="title-info">"${champion.title}"</h4>
             <p class="info-champions">Attack: ${champion.info.attack}</p>
             <p class="info-champions">Defense: ${champion.info.defense}</p>
             <p class="info-champions">Magic: ${champion.info.magic}</p>
             <p class="info-champions">Difficulty: ${champion.info.difficulty}</p>
+            <p class="info-champions"><span class="title-tags">Tags: </span>${champion.tags}</p>
           </div>
         </div>
       </div>
@@ -113,9 +115,11 @@ btnTop5.addEventListener('click', () => {
 
 // BOTON PARA MOSTRAR POR ROLES
 const btnRoles = document.getElementById('btnRoles');
+const video = document.getElementById('video');
 btnRoles.addEventListener('click', () => {
   secondScreen.classList.add('hide');
   thirdScreen.classList.remove('hide');
+  video.classList.remove('hide');
 });
 
 // CONTENEDOR DE ROLES
@@ -125,10 +129,24 @@ const listOnScreenRol = (dataLol) => {
   dataLol.forEach((champion) => {
     const showChampions = `
     <div class="card-champions">
-      <img src=${champion.splash} class="galeria-img">
+      <div class="card">
+        <div class="img-box">
+          <img src=${champion.splash} class="galeria-img">
+        </div>
+        <div class="details">
+          <div class="content-info">
+            <img src=${champion.img} class="small-img">
+            <h4 class="title-info">"${champion.title}"</h4>
+            <p class="info-champions">Attack: ${champion.info.attack}</p>
+            <p class="info-champions">Defense: ${champion.info.defense}</p>
+            <p class="info-champions">Magic: ${champion.info.magic}</p>
+            <p class="info-champions">Difficulty: ${champion.info.difficulty}</p>
+            <p class="info-champions"><span class="title-tags">Tags: </span>${champion.tags}</p>
+          </div>
+        </div>
+      </div>
       <p class="name-champions">${champion.name}</p>
-      <p class="info-champions">Tags:</span> ${champion.tags}</p>
-    </div> 
+    </div>
       `;
     result += showChampions;
   });
@@ -156,10 +174,9 @@ inputBuscarRoles.addEventListener('keyup', () => {
 });
 
 // ORDENAR POR ROL ASESINO
-const video = document.getElementById('video');
 const showAssassin = document.getElementById('rolAssassin');
 showAssassin.addEventListener('click', () => {
-  video.classList.add('hide');
+  video.classList.toggle('hide');
   fourthScreen.classList.remove('hide');
   const titleAssassin = document.getElementById('rolAssassin').value;
   if (titleAssassin) {
@@ -175,6 +192,7 @@ orderAssassin.addEventListener('click', () => {
 // ORDENAR POR ROL LUCHADOR
 const showFighter = document.getElementById('rolFighter');
 showFighter.addEventListener('click', () => {
+  video.classList.toggle('hide');
   fourthScreen.classList.remove('hide');
   const titleFighter = document.getElementById('rolFighter').value;
   if (titleFighter) {
@@ -190,6 +208,7 @@ orderFighter.addEventListener('click', () => {
 // ORDENAR POR ROL MAGOS
 const showMage = document.getElementById('rolMage');
 showMage.addEventListener('click', () => {
+  video.classList.toggle('hide');
   fourthScreen.classList.remove('hide');
   const titleMage = document.getElementById('rolMage').value;
   if (titleMage) {
@@ -205,6 +224,7 @@ orderMage.addEventListener('click', () => {
 // ORDENAR POR ROL TIRADORES
 const showMarksman = document.getElementById('rolMarksman');
 showMarksman.addEventListener('click', () => {
+  video.classList.toggle('hide');
   fourthScreen.classList.remove('hide');
   const titleMarksman = document.getElementById('rolMarksman').value;
   if (titleMarksman) {
@@ -220,6 +240,7 @@ orderMarksman.addEventListener('click', () => {
 // ORDENAR POR ROL SOPORTE
 const showSupport = document.getElementById('rolSupport');
 showSupport.addEventListener('click', () => {
+  video.classList.toggle('hide');
   fourthScreen.classList.remove('hide');
   const titleSupport = document.getElementById('rolSupport').value;
   if (titleSupport) {
@@ -235,6 +256,7 @@ orderSupport.addEventListener('click', () => {
 // ORDENAR POR ROL TANQUE
 const showTank = document.getElementById('rolTank');
 showTank.addEventListener('click', () => {
+  video.classList.toggle('hide');
   fourthScreen.classList.remove('hide');
   const titleTank = document.getElementById('rolTank').value;
   if (titleTank) {
@@ -244,5 +266,5 @@ showTank.addEventListener('click', () => {
 const orderTank = document.querySelector('#rolTank');
 orderTank.addEventListener('click', () => {
   const order = orderTank.value;
-  listOnScreenRol(orderFilterTags(championArray, 'tags', ordeorderar));
+  listOnScreenRol(orderFilterTags(championArray, 'tags', order));
 });
