@@ -93,9 +93,16 @@ const fTop = (dataLol) => {
   dataLol.forEach((champion) => {
     const showChampions = `
     <div class="card-top" id="top">
-    <img src=${champion.splash} class="galeria-top">
-    <p class="name-top">${champion.name}</p>
-    <p class="promedio-top">Average: ${champion.promedio}</p>
+      <div class="cardTwo">
+        <div class="img-boxTwo">
+          <img src=${champion.splash} class="galeria-top">
+        </div>
+        <div class="details-two">
+            <h6 class="title-average">Average</h6>
+            <p class="promedio-top">${champion.promedio}</p>
+        </div>
+      </div>
+      <p class="name-top">${champion.name}</p>
     </div>    
       `;
     result += showChampions;
@@ -115,11 +122,23 @@ btnTop5.addEventListener('click', () => {
 
 // BOTON PARA MOSTRAR POR ROLES
 const btnRoles = document.getElementById('btnRoles');
-const video = document.getElementById('video');
 btnRoles.addEventListener('click', () => {
   secondScreen.classList.add('hide');
   thirdScreen.classList.remove('hide');
-  video.classList.remove('hide');
+});
+
+// BOTON BACK PRIMERA PANTALLA
+const back = document.getElementById('backOne');
+back.addEventListener('click', () => {
+  secondScreen.classList.toggle('hide');
+  firstScreen.classList.toggle('hide');
+});
+
+// BOTON BACK SEGUNDA PANTALLA - TOP 5
+const backTwo = document.getElementById('backTwo');
+backTwo.addEventListener('click', () => {
+  calculationScreen.classList.toggle('hide');
+  secondScreen.classList.toggle('hide');
 });
 
 // CONTENEDOR DE ROLES
@@ -173,10 +192,19 @@ inputBuscarRoles.addEventListener('keyup', () => {
   }
 });
 
+// BOTON BACK SEGUNDA PANTALLA
+const backThree = document.getElementById('backThree');
+backThree.addEventListener('click', () => {
+  thirdScreen.classList.toggle('hide');
+  secondScreen.classList.toggle('hide');
+});
+
 // ORDENAR POR ROL ASESINO
+const video = document.getElementById('video');
 const showAssassin = document.getElementById('rolAssassin');
 showAssassin.addEventListener('click', () => {
-  video.classList.toggle('hide');
+  video.classList.add('hide');
+  thirdScreen.classList.remove('hide');
   fourthScreen.classList.remove('hide');
   const titleAssassin = document.getElementById('rolAssassin').value;
   if (titleAssassin) {
@@ -192,7 +220,8 @@ orderAssassin.addEventListener('click', () => {
 // ORDENAR POR ROL LUCHADOR
 const showFighter = document.getElementById('rolFighter');
 showFighter.addEventListener('click', () => {
-  video.classList.toggle('hide');
+  video.classList.add('hide');
+  thirdScreen.classList.remove('hide');
   fourthScreen.classList.remove('hide');
   const titleFighter = document.getElementById('rolFighter').value;
   if (titleFighter) {
@@ -208,7 +237,8 @@ orderFighter.addEventListener('click', () => {
 // ORDENAR POR ROL MAGOS
 const showMage = document.getElementById('rolMage');
 showMage.addEventListener('click', () => {
-  video.classList.toggle('hide');
+  video.classList.add('hide');
+  thirdScreen.classList.remove('hide');
   fourthScreen.classList.remove('hide');
   const titleMage = document.getElementById('rolMage').value;
   if (titleMage) {
@@ -224,7 +254,8 @@ orderMage.addEventListener('click', () => {
 // ORDENAR POR ROL TIRADORES
 const showMarksman = document.getElementById('rolMarksman');
 showMarksman.addEventListener('click', () => {
-  video.classList.toggle('hide');
+  video.classList.add('hide');
+  thirdScreen.classList.remove('hide');
   fourthScreen.classList.remove('hide');
   const titleMarksman = document.getElementById('rolMarksman').value;
   if (titleMarksman) {
@@ -240,7 +271,8 @@ orderMarksman.addEventListener('click', () => {
 // ORDENAR POR ROL SOPORTE
 const showSupport = document.getElementById('rolSupport');
 showSupport.addEventListener('click', () => {
-  video.classList.toggle('hide');
+  video.classList.add('hide');
+  thirdScreen.classList.remove('hide');
   fourthScreen.classList.remove('hide');
   const titleSupport = document.getElementById('rolSupport').value;
   if (titleSupport) {
@@ -256,7 +288,8 @@ orderSupport.addEventListener('click', () => {
 // ORDENAR POR ROL TANQUE
 const showTank = document.getElementById('rolTank');
 showTank.addEventListener('click', () => {
-  video.classList.toggle('hide');
+  video.classList.add('hide');
+  thirdScreen.classList.remove('hide');
   fourthScreen.classList.remove('hide');
   const titleTank = document.getElementById('rolTank').value;
   if (titleTank) {

@@ -2,6 +2,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  text-decoration: none;
 }
 .hide{
   display: none;
@@ -20,13 +21,12 @@ body {
     flex-flow: column nowrap;
   }
       #btn-menu {
-          display: none;
+        display: none;
       }
       header label {
           display: none;
           width: 30px;
           height: 30px;
-          padding: 10px;
       }
       header label:hover {
           cursor: pointer;
@@ -71,7 +71,7 @@ body {
             text-decoration: none;
             text-transform: uppercase;
             letter-spacing: 2px;
-      }
+        }
   .section{
     display: flex;
     flex-flow: row wrap;
@@ -176,6 +176,12 @@ body {
       width: 70px;
       height: 50px;
   }
+    #menu-bars{
+      color: rgb(224, 221, 20);
+      height: 40px;
+      width: 40px;
+      display: block;
+    }
   .nav {
       position: absolute;
       background: rgb(37, 35, 35); 
@@ -217,7 +223,7 @@ body {
   display: flex;
   background: #ffffff;
   width: 100%;
-  height: 260px;
+  height: 300px;
   align-items: center;
   justify-content: center;
 }
@@ -345,7 +351,6 @@ body {
           position: relative;
           width: 100%;
           height: 360px;
-
         }
         .img-box{
           position: relative;
@@ -490,14 +495,14 @@ body {
   flex-flow: column nowrap;
   padding-top: 0px;
   width: 100%;
-  height: 180px;
+  height: 260px;
 }
   .title-top{
     font-size: 5em;
     font-family: 'Merienda', cursive;   
     text-transform: uppercase;
-    color: #343434;  /* prueba */
-}
+    color: #343434;
+  }
   .description-top{
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: 500;
@@ -509,73 +514,123 @@ body {
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 1em;
     font-weight: 300;
-}
+  }
 .stats-calculation{
   display: flex;
   justify-content: center;
-  background: yellow;
   width: 100%;
+  padding: 20px;
   }
     .stats{
       display: flex;
       flex-wrap: wrap;      
       justify-content: center;
-      background: red;
-      width: 90%;
+      width: 100%;
     }
         #contentTop{
-          background: blue;
           display: flex;
-          /* flex-wrap: wrap-reverse; */
           flex-wrap: wrap;
-          /* flex-direction: row; */
-          width: 80%;
-          }
+          width: 100%;
+          justify-content: center;
+        }
             .card-top{
-              background: pink;
               max-width: 30%;
               height: 400px;
               margin: 10px;
               padding: 10px;
               flex: auto;
             }
-              .galeria-top{
-                background: skyblue;
+              .cardTwo{
+                position: relative;
                 width: 100%;
-                height: 350px;
+                height: 360px;
               }
+                .img-boxTwo{
+                  position: relative;
+                  max-width: 100%;
+                  height: 360px;
+                  overflow: hidden;
+                }
+                .galeria-top{
+                  max-width: 100%;
+                  height: 360px;
+                }
+              .details-two{
+                display: flex;
+                position: absolute;
+                justify-content: center;
+                flex-direction: column;
+                align-content: center;
+                height: 86px;
+                width: 100px;
+                color: white;
+                box-sizing: content-box;
+                padding-top: 15px;
+                font-size: 11px;
+                top: 0px;
+                left: 0px;
+                bottom: 0px;
+                right: 0px;
+                background: rgba(9, 214, 214, 0.8);
+              }
+              .details-two:after{
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 0;
+                height: 0;
+                border-bottom: 13px solid rgba(195, 195, 195, 0.9); 
+                border-left: 50px solid transparent; 
+                border-right: 50px solid transparent; 
+              }
+                .title-average{
+                  font-family: 'Noto Sans JP', sans-serif;
+                  font-weight: 500;
+                  font-size: 1.5em;
+                  text-align: center;   
+                  color: #343434;
+                }
+                .promedio-top{
+                  font-family: 'Noto Sans JP', sans-serif;
+                  font-weight: 300;
+                  font-size: 1.5em;
+                  text-align: center;   
+                  color: #fff;
+                }
               .name-top{
-                background: springgreen;
-              }
-              .promedio-top{
-                background: tomato;
+                font-size: 1.5em;
+                font-family: 'Merienda', cursive;      
+                text-align: center;   
+                color: #fbb901;
               }
 /* TERCERA PANTALLA - ROLES DE CAMPEONES - ICONOS Y VIDEO */
 .roles-firstScreen{
-  background: #fff;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   flex-direction: row;
+  align-items: center;
   height: 150px;
 }
-  .button-assassin{
-    background: red;
+  .button-roles{
     display: flex;
     justify-content: center;
     flex-direction: column;
   }
+  .title-roles{
+    text-align: center;
+    color: #343434;
+    font-family: 'Merienda', cursive; 
+  }
+    .input-roles{
+      outline: none;
+    }
 .videoIntro{
   position: relative;
   text-align: center;
   background: #fff;
 }
-
-
-
-
-
-
 /* CUARTA PANTALLA - FILTRAR ROLES DE CAMPEONES */
 .header-container{
   background: #fff;
@@ -595,7 +650,7 @@ body {
     align-items: center;
   }
     .title-asse{
-      color: black;
+      color: #343434;
       font-size: 3.5em;
       font-family: 'Merienda', cursive; 
       text-transform: uppercase;
@@ -608,7 +663,12 @@ body {
       width: 100%;
       justify-content: center;
     }
-
+/* BOTONES ADICIONALES */
+i{
+  padding-top: 25px;
+  font-size: 50px;
+  color: #343434;
+}
 
 
 
